@@ -1,0 +1,320 @@
+/* ==========================================================================
+   ABOUT PAGE STYLES
+   ========================================================================== */
+
+/* --- About Hero Section --- */
+.about-hero {
+    padding: clamp(60px, 8vw, 100px) 0;
+    background: linear-gradient(135deg, #fdfafb 0%, #f9ecee 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(243, 178, 183, 0.1) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.about-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero-content .subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.about-hero-content .subtitle::after {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background-color: #f3b2b7;
+}
+
+.about-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+.about-hero-content h1 .heart-icon {
+    color: #f3b2b7;
+    font-size: 0.8em;
+    margin-left: 8px;
+}
+
+.about-hero-content p {
+    font-family: 'Poppins', sans-serif;
+    color: #555555;
+    font-size: clamp(15px, 1.5vw, 17px);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- About Content Section (Text + Image) --- */
+.about-content {
+    padding: clamp(60px, 8vw, 100px) 0;
+    background-color: #ffffff;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+.about-text h2 .heart-icon {
+    color: #f3b2b7;
+    font-size: 0.7em;
+    margin-left: 5px;
+}
+
+.about-text p {
+    font-family: 'Poppins', sans-serif;
+    color: #666666;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.about-text p strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.about-text .btn-pink {
+    margin-top: 15px;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 4 / 5;
+    margin: 0 auto;
+    border-radius: 30px;
+    overflow: hidden;
+    background-image: url('https://images.pexels.com/photos/3997390/pexels-photo-3997390.jpeg?auto=compress&cs=tinysrgb&w=1000');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: 4px solid #ffffff;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+}
+
+/* --- Core Values Section --- */
+.core-values {
+    padding: clamp(60px, 8vw, 100px) 0;
+    background-color: #fdfafb;
+}
+
+.values-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: clamp(30px, 5vw, 60px);
+    align-items: start;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.values-text {
+    position: sticky;
+    top: 120px;
+}
+
+.values-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.values-text h2 .heart-icon {
+    color: #f3b2b7;
+    font-size: 0.7em;
+    margin-left: 5px;
+}
+
+.values-text p {
+    font-family: 'Poppins', sans-serif;
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.value-card {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 16px;
+    border: 1px solid #f0f0f0;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: #f3b2b7;
+}
+
+.value-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fdfafb;
+    color: #f3b2b7;
+    border-radius: 12px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+.value-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+
+/* Tablets (Landscape) & Small Laptops */
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .about-text {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .about-text .btn-pink {
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        max-width: 90%;
+        border-width: 3px;
+        border-radius: 20px;
+    }
+
+    .values-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .values-text {
+        position: relative;
+        top: 0;
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+    .about-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .value-card {
+        padding: 30px 25px;
+    }
+
+    .about-text .btn-pink {
+        width: 100%;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .about-hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-text h2,
+    .values-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p,
+    .values-text p {
+        font-size: 14px;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,320 @@
+/* ==========================================================================
+   CONTACT PAGE STYLES (Fully Responsive)
+   ========================================================================== */
+
+/* --- Contact Cards Section --- */
+.contact-cards-section {
+    padding: clamp(40px, 6vw, 60px) 0 20px;
+    background-color: #ffffff;
+    margin-top: -40px; /* Pulls the cards up slightly over the hero */
+    position: relative;
+    z-index: 10;
+}
+
+.contact-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(20px, 3vw, 30px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Ensures cards don't touch screen edges on mobile */
+}
+
+.contact-card {
+    background: #ffffff;
+    padding: clamp(25px, 4vw, 40px) clamp(20px, 3vw, 30px);
+    border-radius: 20px;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Ensures cards in the same row are equal height */
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(243, 178, 183, 0.15);
+    border-color: #f3b2b7;
+}
+
+.contact-icon {
+    width: clamp(60px, 8vw, 70px);
+    height: clamp(60px, 8vw, 70px);
+    background-color: #fdfafb;
+    color: #f3b2b7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(24px, 4vw, 30px);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    background-color: #f3b2b7;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.contact-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(18px, 2vw, 20px);
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex-grow: 1; /* Pushes the link to the bottom if text lengths vary */
+}
+
+.card-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #d99ca2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease;
+}
+
+.contact-card:hover .card-link {
+    gap: 12px;
+}
+
+/* --- Contact Form & Map Section --- */
+.contact-form-section {
+    padding: clamp(50px, 8vw, 80px) 0;
+    background-color: #fdfafb;
+}
+
+.contact-form-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: clamp(30px, 5vw, 50px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    align-items: start;
+}
+
+/* Form Wrapper */
+.form-wrapper {
+    background: #ffffff;
+    padding: clamp(30px, 5vw, 50px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.form-wrapper h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 4vw, 32px);
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.form-wrapper p {
+    font-family: 'Poppins', sans-serif;
+    color: #666666;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.contact-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    /* 16px prevents auto-zoom on iOS devices */
+    font-size: 16px; 
+    color: #1a1a1a;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #f3b2b7;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(243, 178, 183, 0.2);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Info Wrapper (Hours & Map) */
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 4vw, 30px);
+}
+
+.hours-box {
+    background: #ffffff;
+    padding: clamp(25px, 4vw, 40px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.hours-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(20px, 3vw, 24px);
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hours-box h3 i {
+    color: #f3b2b7;
+}
+
+.hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #555555;
+}
+
+.hours-list li span:first-child {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.hours-list li.closed span {
+    color: #d99ca2;
+    font-weight: 600;
+}
+
+.hours-list li:last-child {
+    border-bottom: none;
+}
+
+.map-box {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    height: clamp(250px, 30vw, 300px); /* Fluid height */
+    width: 100%;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 14px;
+    display: block; /* Removes tiny gap under iframe */
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+
+/* Tablets & Small Laptops */
+@media (max-width: 992px) {
+    .contact-cards-grid {
+        /* Switch to 2 columns instead of a weird centered 3rd card */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-form-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .map-box {
+        height: 400px; /* Taller map when stacked */
+    }
+}
+
+/* Mobile Phones (Landscape & Portrait) */
+@media (max-width: 768px) {
+    .contact-cards-section {
+        margin-top: -20px; /* Adjust overlap for smaller screens */
+    }
+
+    .contact-cards-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+    }
+
+    .contact-form .form-row {
+        grid-template-columns: 1fr; /* Stack name and phone fields */
+    }
+
+    .map-box {
+        height: 300px;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .contact-form-section {
+        padding: 40px 0;
+    }
+
+    .contact-form-layout {
+        padding: 0 10px;
+    }
+
+    /* Slightly reduce padding on cards for very small screens */
+    .contact-card {
+        padding: 25px 20px;
+    }
+}

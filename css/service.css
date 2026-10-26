@@ -1,0 +1,262 @@
+/* ==========================================================================
+   SERVICES PAGE STYLES
+   ========================================================================== */
+
+/* --- Services Hero Section --- */
+.about-hero {
+    padding: clamp(60px, 8vw, 100px) 0;
+    background: linear-gradient(135deg, #fdfafb 0%, #f9ecee 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(243, 178, 183, 0.1) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.about-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero-content .subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.about-hero-content .subtitle::after {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background-color: #f3b2b7;
+}
+
+.about-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+.about-hero-content h1 .heart-icon {
+    color: #f3b2b7;
+    font-size: 0.8em;
+    margin-left: 8px;
+}
+
+.about-hero-content p {
+    font-family: 'Poppins', sans-serif;
+    color: #555555;
+    font-size: clamp(15px, 1.5vw, 17px);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Main Services Grid Section --- */
+.services {
+    padding: clamp(60px, 8vw, 100px) 0;
+    background-color: #ffffff;
+}
+
+.services-grid {
+    display: grid;
+    /* Uses auto-fit to perfectly adapt to any screen size without media queries */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Individual Service Card --- */
+.service-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures all cards in a row are equal height */
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(243, 178, 183, 0.15);
+    border-color: #f3b2b7;
+}
+
+.service-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Slightly wider than square for a premium look */
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.05);
+}
+
+.service-info {
+    padding: 30px 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.service-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+.service-info p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Policies Section (Reusing Core Values Classes) --- */
+.core-values {
+    padding: clamp(60px, 8vw, 100px) 0;
+    background-color: #fdfafb;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid #f0f0f0;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+    text-align: center; /* Centers text for the policy cards */
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: #f3b2b7;
+}
+
+.value-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #fdfafb;
+    color: #f3b2b7;
+    border-radius: 50%;
+    font-size: 24px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+    background-color: #f3b2b7;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.value-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.value-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+
+/* Tablets & Small Laptops */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+    .about-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 30px;
+    }
+
+    .service-card {
+        max-width: 450px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .about-hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .service-info {
+        padding: 25px 20px;
+    }
+}

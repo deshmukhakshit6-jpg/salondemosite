@@ -1,0 +1,207 @@
+/* ==========================================================================
+   PRICE LIST PAGE STYLES
+   ========================================================================== */
+
+.price-section {
+    padding: clamp(60px, 8vw, 100px) 0;
+    background-color: #fdfafb; /* Soft pink background */
+}
+
+/* --- Price Grid Layout --- */
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Category Block --- */
+.price-category {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(243, 178, 183, 0.15);
+    border-color: #f3b2b7;
+}
+
+.category-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #fdfafb;
+}
+
+.category-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.category-header h2 i {
+    color: #f3b2b7;
+    font-size: 20px;
+}
+
+.category-header p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+}
+
+/* --- Individual Price Items --- */
+.price-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.price-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Aligns text to the bottom for the dotted line */
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.price-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* The dotted line connecting name and price */
+.price-list li::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    border-bottom: 2px dotted #e0e0e0;
+    z-index: 1;
+}
+
+.service-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background-color: #ffffff; /* Hides the dotted line behind text */
+    padding-right: 10px;
+    z-index: 2;
+}
+
+.service-name span {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: #888888;
+    margin-top: 3px;
+}
+
+.service-price {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #d99ca2; /* Darker pink for price */
+    background-color: #ffffff; /* Hides the dotted line behind text */
+    padding-left: 10px;
+    z-index: 2;
+}
+
+/* --- Pricing Note --- */
+.price-note {
+    max-width: 800px;
+    margin: 60px auto 0;
+    text-align: center;
+    background: #fdf0f1; /* Very light pink */
+    padding: 25px 30px;
+    border-radius: 15px;
+    border: 1px solid #f3b2b7;
+    font-family: 'Poppins', sans-serif;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.price-note i {
+    color: #d99ca2;
+    font-size: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.price-note strong {
+    color: #1a1a1a;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .price-grid {
+        grid-template-columns: 1fr; /* Stack to 1 column */
+        gap: 30px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+    .price-category {
+        padding: 30px 25px;
+    }
+
+    .category-header h2 {
+        font-size: 22px;
+    }
+
+    .service-name {
+        font-size: 15px;
+    }
+
+    .service-price {
+        font-size: 16px;
+    }
+    
+    .price-note {
+        padding: 20px;
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .price-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    /* Remove dotted line on very small screens to prevent overlap */
+    .price-list li::after {
+        display: none;
+    }
+
+    .service-price {
+        margin-top: 5px;
+        padding-left: 0;
+        background: transparent;
+    }
+    
+    .service-name {
+        background: transparent;
+        padding-right: 0;
+    }
+}
